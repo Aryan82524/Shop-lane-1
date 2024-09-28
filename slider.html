@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SLIDER | E-COMMERCE WEBSITE</title>
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    
+    <!-- EXTERNAL LINKS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- <link rel="stylesheet" href="slider.css"> -->
+    <link rel="stylesheet" href="header.css"> 
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        #containerSlider
+        {
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+        #containerSlider img
+        {
+            width: 100%;
+            height: 140%;
+            text-align: center;
+            align-content: center;
+        }
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="container">
+            <!-- SHOP NAME -->
+            <div id="shopName">
+                <a href="index.html"><b>SHOP</b>LANE</a>
+            </div>
+            <!-- COLLECTIONS ON WEBSITE -->
+            <div id="collection">
+                <div id="clothing"><a href="clothing.html">CLOTHING</a></div>
+                <div id="accessories"><a href="accessories.html">ACCESSORIES</a></div>
+            </div>
+            <!-- SEARCH SECTION -->
+            <div id="search">
+                <i class="fas fa-search search"></i>
+                <input type="text" id="input" name="searchBox" placeholder="Search for Clothing and Accessories">
+            </div>
+            <!-- USER SECTION (CART AND USER ICON) -->
+            <div id="user">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart addedToCart">
+                        <div id="badge">0</div>
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-user-circle userIcon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!-- IMAGE SLIDER -->
+        <div id="containerSlider">
+            <div class="slidingImage"><img src="img1.png" alt="image1"></div>
+            <div class="slidingImage"><img src="img2.png" alt="image2"></div>
+            <div class="slidingImage"><img src="img3.png" alt="image3"></div>
+            <div class="slidingImage"><img src="img4.png" alt="image4"></div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#containerSlider').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    </script>
+</body>
+</html>
